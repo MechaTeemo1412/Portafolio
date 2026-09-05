@@ -27,6 +27,7 @@
     </header>
     <!--SECCIÓN PRINCIPAL-->
     <main>
+        <!--SECCION HERO O DE INICIO-->
         <section id="Inicio" class="hero section">
             <div class="hero-container">
                 <div class="hero-content">
@@ -45,7 +46,94 @@
                     <img src="assets/puck.png" alt="Alan Vidal - Desarrollador Full Stack">
                 </div>
             </div>
+        <!--SECCION SOBRE MÍ-->    
+        <section id="sobre-mi" class="about section">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="timeline">
+                <article class="timeline-card">
+                    <h3>Estudiante de ingeniería en informática</h3>
+                    <span class="date">Actualidad</span>
+                    <p>DuocUc, Sede Puerto Montt, Chile</p>
+                </article>
+            </div>
+        </section>
+        <!--SECCION HABILIDADES-->
+        <section id="Habilidades" class="skills section">
+            <h2 class="section-title">Stack Tecnológico</h2>
+            <div class="skill-grid">
+                <div class="skill-pill">
+                    <span>PY</span>
+                    <p>Python</p>
+                </div>
+                <div class="skill-pill">
+                    <span>JV</span>
+                    <p>Java & Spring Boot</p>
+                </div>
+                <div class="skill-pill">
+                    <span>DB</span>
+                    <p>Oracle SQL</p>
+                </div>
+                <div class="skill-pill">
+                    <span>GH</span>
+                    <p>GitHub</p>
+                </div>
+                <div class="skill-pill">
+                    <span>JS</span>
+                    <p>JavaScript</p>
+                </div>
+            </div>
+        </section>
+        <!--SECCIÓN PROYECTOS-->
+        <section id="proyectos" class="project section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>Nexus Health</h3>
+                        <p>Ecosistema de arquitectura distribuida compuesto por microservicios desacoplados, 
+                            diseñado específicamente para mitigar el ausentismo de pacientes en centros médicos
+                            de tamaño pequeño y mediano.
+                        </p>
+                        <div class="tags">
+                            <span>Java 21</span>
+                            <span> Spring Boot 3.x (Spring Web, Spring Data JPA)</span>
+                            <span>Spring Cloud Gateway</span>
+                            <span>OpenFeign</span>
+                            <span>Docker & Docker Compose</span>
+                            <span>Oracle Database(Autonomous Database Cloud)</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!--SECCION CONTACTO-->
+        <section id="contacto" class="contact section">
+            <h2 class="section-title">¿En qué te puedo ayudar?</h2>
+            <form id="contact-form" class="glass-form" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
+                    <span class="error-msg" id="err-nombre"></span>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Email</label>
+                    <input type="text" name="correo" id="correo" placeholder="Tu Email" required>
+                    <span class="error-msg" id="err-email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                    <span class="error-msg" id="err-mensaje"></span>
+                </div>
+                <button class="btn-primary">Enviar Mensaje</button>
+                <p id="form-feedback" class="feedback-msg"></p>
+            </form>
         </section>
     </main>
+    <!--SECCTION FOOTER O PIE DE PÁGINA-->
+    <footer>
+    <p>&copy; 2026 Alan Vidal. Diseñado para escalar.</p>
+</footer>
+<script src="app.js"></script>
 </body>
 </html>
