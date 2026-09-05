@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio || Alan Vidal</title>
+    
     <!--Fuentes de google-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap">
     <!--Font Awesome para íconos-->
@@ -12,41 +13,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--SECCIÓN CABECERA-->
+    
+    <!-- ========== CABECERA Y NAVEGACIÓN ========== -->
     <header class="dark-header">
         <nav class="nav-container">
             <a href="#inicio" class="logo">Alan<span>Vidal</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#Habilidades">Habilidades</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <!--SECCIÓN PRINCIPAL-->
+    
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
     <main>
-        <!--SECCION HERO O DE INICIO-->
-        <section id="Inicio" class="hero section">
+        
+        <!-- ========== SECCIÓN HERO (INICIO) ========== -->
+        <section id="inicio" class="hero section">
             <div class="hero-container">
                 <div class="hero-content">
                     <span class="badge">Analista Programador</span>
                     <h1>Ingeniería en informática</h1>
+                    <p>Desarrollador Full Stack</p>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-outline">Contactar</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/MechaTeemo1412" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-                <p>Desarrollador Full Stack</p>
-                <div class="hero-actions">
-                    <a href="#proyectos">Ver Proyectos</a>
-                    <a href="#contacto">Contactar</a>
+                <div class="hero-image">
+                    <div class="image-circle">
+                        <img src="assets/puck.png" alt="Alan Vidal - Desarrollador Full Stack">
+                    </div>
                 </div>
-                <div class="social-links">...</div>
             </div>
-            <div class="hero-image">
-                <div class="image-circle">
-                    <img src="assets/puck.png" alt="Alan Vidal - Desarrollador Full Stack">
-                </div>
-            </div>
-        <!--SECCION SOBRE MÍ-->    
+        </section>
+        
+        <!-- ========== SECCIÓN SOBRE MÍ ========== -->
         <section id="sobre-mi" class="about section">
             <h2 class="section-title">Sobre mí</h2>
             <div class="timeline">
@@ -57,10 +67,11 @@
                 </article>
             </div>
         </section>
-        <!--SECCION HABILIDADES-->
-        <section id="Habilidades" class="skills section">
+        
+        <!-- ========== SECCIÓN HABILIDADES ========== -->
+        <section id="habilidades" class="skills section">
             <h2 class="section-title">Stack Tecnológico</h2>
-            <div class="skill-grid">
+            <div class="skills-grid">
                 <div class="skill-pill">
                     <span>PY</span>
                     <p>Python</p>
@@ -83,8 +94,9 @@
                 </div>
             </div>
         </section>
-        <!--SECCIÓN PROYECTOS-->
-        <section id="proyectos" class="project section">
+        
+        <!-- ========== SECCIÓN PROYECTOS ========== -->
+        <section id="proyectos" class="projects section">
             <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
                 <article class="project-card">
@@ -96,17 +108,18 @@
                         </p>
                         <div class="tags">
                             <span>Java 21</span>
-                            <span> Spring Boot 3.x (Spring Web, Spring Data JPA)</span>
+                            <span>Spring Boot 3.x (Spring Web, Spring Data JPA)</span>
                             <span>Spring Cloud Gateway</span>
                             <span>OpenFeign</span>
                             <span>Docker & Docker Compose</span>
-                            <span>Oracle Database(Autonomous Database Cloud)</span>
+                            <span>Oracle Database (Autonomous Database Cloud)</span>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
-        <!--SECCION CONTACTO-->
+        
+        <!-- ========== SECCIÓN CONTACTO ========== -->
         <section id="contacto" class="contact section">
             <h2 class="section-title">¿En qué te puedo ayudar?</h2>
             <form id="contact-form" class="glass-form" novalidate>
@@ -117,7 +130,7 @@
                 </div>
                 <div class="form-group">
                     <label for="correo">Email</label>
-                    <input type="text" name="correo" id="correo" placeholder="Tu Email" required>
+                    <input type="email" name="correo" id="correo" placeholder="Tu Email" required>
                     <span class="error-msg" id="err-email"></span>
                 </div>
                 <div class="form-group">
@@ -125,15 +138,18 @@
                     <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                     <span class="error-msg" id="err-mensaje"></span>
                 </div>
-                <button class="btn-primary">Enviar Mensaje</button>
+                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
                 <p id="form-feedback" class="feedback-msg"></p>
             </form>
         </section>
+        
     </main>
-    <!--SECCTION FOOTER O PIE DE PÁGINA-->
+    
+    <!-- ========== PIE DE PÁGINA ========== -->
     <footer>
-    <p>&copy; 2026 Alan Vidal. Diseñado para escalar.</p>
-</footer>
-<script src="app.js"></script>
+        <p>&copy; 2026 Alan Vidal. Diseñado para escalar.</p>
+    </footer>
+    
+    <script src="app.js"></script>
 </body>
 </html>
