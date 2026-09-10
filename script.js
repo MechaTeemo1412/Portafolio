@@ -66,7 +66,3 @@ formulario.addEventListener("submit", function (evento) {
     resultado.textContent = "Formulario válido. Enviando mensaje...";
     resultado.className = "feedback-msg success";
     resultado.style.display = "block";
-
-    // Evita el envío real para pruebas (quita esta línea si deseas enviar)
-    evento.preventDefault();
-});
