@@ -1,4 +1,3 @@
-/* ========== VARIABLES ========== */
 :root{
     --fondo:#0a0a0f;
     --superficie:#1a1a24;
@@ -15,7 +14,6 @@
     --texto-font:'Inter',sans-serif;
 }
 
-/* ========== BASE ========== */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
     background:var(--fondo);
@@ -24,7 +22,6 @@ body{
     line-height:1.6;
 }
 
-/* ========== HEADER ========== */
 .dark-header{
     position:fixed;top:0;width:100%;
     background:rgba(10,10,15,.95);
@@ -46,7 +43,6 @@ body{
     font-size:.9rem;letter-spacing:1px;text-transform:uppercase;
 }
 
-/* ========== SECCIONES ========== */
 .section{padding:6rem 2rem}
 .section-title{
     font-family:var(--titulos);font-size:2.5rem;color:var(--dorado);
@@ -54,7 +50,6 @@ body{
     border-bottom:2px solid var(--dorado);padding-bottom:1rem;
 }
 
-/* ========== HERO ========== */
 .hero{
     min-height:100vh;display:flex;align-items:center;justify-content:center;
     background:linear-gradient(180deg,#0a0a0f,#1a1a24);
@@ -93,7 +88,6 @@ body{
 }
 .image-circle img{width:100%;height:100%;object-fit:cover;object-position:center}
 
-/* ========== SOBRE MÍ ========== */
 .about{background:var(--superficie-alt)}
 .timeline{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -108,7 +102,6 @@ body{
 .timeline-card .date{color:var(--sangre-brillante);font-style:italic;display:block;margin-bottom:1rem}
 .timeline-card p{color:var(--texto-secundario)}
 
-/* ========== HABILIDADES ========== */
 .skills{background:var(--fondo)}
 .skills-grid{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -124,7 +117,6 @@ body{
 }
 .skill-pill p{color:var(--texto);font-size:.9rem}
 
-/* ========== PROYECTOS ========== */
 .projects{background:var(--superficie-alt)}
 .projects-grid{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -149,7 +141,6 @@ body{
     border-top: 1px solid var(--borde);
 }
 
-/* ========== CONTACTO ========== */
 .contact{background:var(--fondo)}
 .glass-form{
     background:rgba(26,26,36,.8);padding:2rem;border-radius:5px;
@@ -175,7 +166,6 @@ body{
     border-color: var(--error) !important;
     box-shadow: 0 0 5px rgba(255, 51, 51, 0.3);
 }
-/* ========== FOOTER ========== */
 footer{
     background:var(--fondo);text-align:center;padding:2rem;
     border-top:2px solid var(--sangre);

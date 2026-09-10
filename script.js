@@ -1,14 +1,11 @@
 "use strict";
 
-// ========== ELEMENTOS DEL DOM ==========
 const formulario = document.querySelector("#contact-form");
 const nombre = document.querySelector("#nombre");
 const email = document.querySelector("#email");   // Asegúrate de usar id="email" en HTML
 const mensaje = document.querySelector("#mensaje");
 const resultado = document.querySelector("#form-feedback");
 
-// ========== FUNCIONES DE ERROR ==========
-// Muestra el error debajo del campo
 function mostrarError(campo, texto) {
     campo.classList.add("input-error");
     const error = document.querySelector(`#err-${campo.id}`);
@@ -16,8 +13,6 @@ function mostrarError(campo, texto) {
         error.textContent = texto;
     }
 }
-
-// Limpia el error de un campo
 function limpiarError(campo) {
     campo.classList.remove("input-error");
     const error = document.querySelector(`#err-${campo.id}`);
@@ -26,7 +21,6 @@ function limpiarError(campo) {
     }
 }
 
-// ========== VALIDACIÓN AL ENVIAR ==========
 formulario.addEventListener("submit", function (evento) {
     const nombreValor = nombre.value.trim();
     const emailValor = email.value.trim();
@@ -53,8 +47,6 @@ formulario.addEventListener("submit", function (evento) {
     } else {
         limpiarError(email);
     }
-
-    // --- Validar mensaje ---
     if (mensajeValor.length < 10) {
         mostrarError(mensaje, "Ingresa un mensaje con al menos 10 caracteres.");
         formularioValido = false;   // <-- Agregado
@@ -71,7 +63,6 @@ formulario.addEventListener("submit", function (evento) {
         return;
     }
 
-    // Si todo está correcto
     resultado.textContent = "Formulario válido. Enviando mensaje...";
     resultado.className = "feedback-msg success";
     resultado.style.display = "block";
