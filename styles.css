@@ -171,86 +171,106 @@ footer{
     border-top:2px solid var(--sangre);
 }
 footer p{color:var(--texto-secundario);font-size:.9rem}
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
+  
+  /* 1. Evitar desbordes generales */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* 2. Corregir navegación */
   .nav-container {
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 1rem;
+    gap: 0.75rem;
+    padding: 1rem 0.5rem;
   }
 
   .nav-links {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem 1.2rem;
+    gap: 0.5rem 1rem;
     padding: 0;
   }
 
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  /* 3. Hero Section: apilar imagen y texto sin solaparse */
+  .hero {
+    min-height: auto;
+    padding: 8rem 1rem 3rem 1rem;
   }
 
   .hero-container {
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: column-reverse; /* Pone la imagen arriba o abajo de forma ordenada */
+    align-items: center;
     text-align: center;
     gap: 2rem;
-    padding-top: 5rem;
+    width: 100%;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-    line-height: 1.2;
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+    word-wrap: break-word;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .hero-actions {
-    justify-content: center;
+    display: flex;
     flex-direction: column;
+    gap: 0.8rem;
     width: 100%;
+    max-width: 280px;
+    margin: 1.5rem auto;
   }
 
   .hero-actions .btn {
     width: 100%;
     text-align: center;
+    padding: 0.75rem 1rem;
   }
 
-  .image-circle {
-    width: 180px;
-    height: 180px;
+  /* 4. Contenedor de la Imagen */
+  .hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
   }
 
-  .section {
-    padding: 3.5rem 1rem 2rem;
+  .image-circle {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2px solid var(--blood-red, #991b1b);
+    box-shadow: 0 0 15px rgba(153, 27, 27, 0.4);
   }
 
-  .skills-grid, 
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .project-card {
-    padding: 1.2rem;
-  }
-
-  .glass-form {
+  .image-circle img {
     width: 100%;
-    max-width: 100%;
-    padding: 1.5rem 1rem;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 16px;
-  }
-}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
