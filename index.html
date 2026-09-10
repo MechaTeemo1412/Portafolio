@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio || Alan Vidal</title>
     
-    <!--Fuentes de google-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&display=swap">
-    <!--Font Awesome para íconos-->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!--Hoja de estilos CSS-->
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <!-- ========== CABECERA Y NAVEGACIÓN ========== -->
+
     <header class="dark-header">
         <nav class="nav-container">
             <a href="#inicio" class="logo">Alan<span>Vidal</span></a>
@@ -27,11 +25,9 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+
     <main>
-        
-        <!-- ========== SECCIÓN HERO (INICIO) ========== -->
+
         <section id="inicio" class="hero section">
             <div class="hero-container">
                 <div class="hero-content">
@@ -55,20 +51,20 @@
                 </div>
             </div>
         </section>
-        
-        <!-- ========== SECCIÓN SOBRE MÍ ========== -->
+
         <section id="sobre-mi" class="about section">
             <h2 class="section-title">Sobre mí</h2>
             <div class="timeline">
                 <article class="timeline-card">
-                    <h3>Estudiante de ingeniería en informática</h3>
+                    <h3>Ingeniero en informática</h3>
                     <span class="date">Actualidad</span>
-                    <p>DuocUc, Sede Puerto Montt, Chile</p>
+                    <p>Estudiante de DuocUc de segundo año, Sede Puerto Montt, Chile.
+                        Interesado en el desarollo de Backend y FrontEnd.
+                    </p>
                 </article>
             </div>
         </section>
-        
-        <!-- ========== SECCIÓN HABILIDADES ========== -->
+
         <section id="habilidades" class="skills section">
             <h2 class="section-title">Stack Tecnológico</h2>
             <div class="skills-grid">
@@ -94,8 +90,7 @@
                 </div>
             </div>
         </section>
-        
-        <!-- ========== SECCIÓN PROYECTOS ========== -->
+
         <section id="proyectos" class="projects section">
             <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
@@ -114,23 +109,29 @@
                             <span>Docker & Docker Compose</span>
                             <span>Oracle Database (Autonomous Database Cloud)</span>
                         </div>
+                        <!-- Enlace al repositorio del proyecto -->
+                        <div class="project-actions">
+                            <a href="https://github.com/MechaTeemo1412/DSY1103-NexusHealth-Script" target="_blank" class="social-link" aria-label="GitHub del proyecto">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
         
-        <!-- ========== SECCIÓN CONTACTO ========== -->
         <section id="contacto" class="contact section">
             <h2 class="section-title">¿En qué te puedo ayudar?</h2>
-            <form id="contact-form" class="glass-form" novalidate>
+            <form id="contact-form" class="glass-form" 
+            action="https://formsubmit.co/alanvidal1412@gmail.com" method="post" novalidate>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
                     <span class="error-msg" id="err-nombre"></span>
                 </div>
                 <div class="form-group">
-                    <label for="correo">Email</label>
-                    <input type="email" name="correo" id="correo" placeholder="Tu Email" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Tu Email" required>
                     <span class="error-msg" id="err-email"></span>
                 </div>
                 <div class="form-group">
@@ -145,11 +146,10 @@
         
     </main>
     
-    <!-- ========== PIE DE PÁGINA ========== -->
     <footer>
         <p>&copy; 2026 Alan Vidal. Diseñado para escalar.</p>
     </footer>
     
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
